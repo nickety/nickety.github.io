@@ -1,0 +1,82 @@
+body {
+  padding-top: 4rem;
+}
+
+blockquote {
+  background-color: lightyellow;
+  border-left-color: orange;
+  padding: 0.5rem 2em 0.5rem 5em;
+  font-size: inherit;
+}
+
+li {
+  margin: 0.75rem 0;
+}
+
+.alert {
+    display: flex;
+    flex-direction: row;
+}
+
+.alert .glyphicon {
+    margin-right: 8px;
+    align-self: center;
+}
+
+.row {
+  padding: 4rem 2em;
+}
+
+.contact {
+  list-style-type: none;
+}
+
+.contact li::before {
+  font-family: "Glyphicons Halflings";
+  font-size: 9px;
+  float: left;
+  margin-top: 4px;
+  margin-left: -17px;
+}
+
+li.post::before {
+  content: "\270f";
+}
+
+li.email::before {
+  content: "\2709";
+}
+
+li.telephone::before {
+  content: "\e182";
+}
+
+.registrar-agreement ol {
+  counter-reset: lis;
+  list-style-type: none;
+  padding: 0;
+}
+
+.registrar-agreement li::before {
+  counter-increment: lis;
+  content: counter(prefix, upper-alpha) "." counters(lis, ".");
+  font-weight: bold;
+  position: absolute;
+  left: -4em;
+}
+
+.registrar-agreement li {
+  position: relative;
+}
+
+.sch1-A7 > ol {
+  counter-reset: prefix 1 lis 6;
+}
+
+.sch1-C3 > ol {
+  counter-reset: prefix 3 lis 2;
+}
+
+.sch1-D1 > ol {
+  counter-reset: prefix 4 lis 0;
+}
